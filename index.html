@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        
+        <link href="assets/img/icono-1.ico" rel="shortcut icon" type="image/x-icon"/>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+        </script>
+        <!-- Font Awesome icons (free version)-->
+        <script crossorigin="anonymous" src="https://use.fontawesome.com/releases/v5.12.1/js/all.js">
+        </script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet"/>
+        <link href="css/style_simulation.css" rel="stylesheet"/>
+        <script src="js/validar_valores.js"></script>
+        <script src="js/validar_funciones.js"></script>
+        <script src="js/validar_operaciones.js"></script>
+        <script src="js/validar_token.js"></script>
+        <script src="js/validar_parser.js"></script>
+        <script src="js/validar_interpretador.js"></script>
+       
+       
+        <script>
+            function copiar(id_elemento) {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+      }
+        </script>
+    </head>
+    <body id="page-top">
+      
+        <section class="page-section portfolio" id="compi">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-12">
+                                    <h6 style="color:#fff; margin-left: 40%; font-family: cursive;">
+                                        Ingresa el Código
+                                    </h6>
+                                </label>
+                                <div class="d-flex">
+                                    <div class="col-md-0 mt-2 bg-secondary text-white text-center rounded p-2">
+                                        1
+                                        <br/>
+                                        2
+                                        <br/>
+                                        3
+                                        <br/>
+                                        4
+                                        <br/>
+                                        5
+                                        <br/>
+                                        6
+                                        <br/>
+                                        7
+                                        <br/>
+                                        8
+                                        <br/>
+                                        9
+                                        <br/>
+                                        10
+                                        <br/>
+                                        11
+                                    </div>
+                                    <div class="col-md-11 p-2">
+                                        <textarea class="form-control" rows="11" id="$code" spellcheck="false" style="resize: none;"></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-secondary mt-3" style="margin-left: 40%;font-family: cursive;" type="button" id="$button2" onclick="var x=parse(tokenize($code.value));$console.value='';if(x.constructor===String)$console.value='ERROR: '+x;else run(x)">
+                                        Ejecutar
+                                    </button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <h6 class="mb-4" style="color:#fff; margin-left: 25%;font-family: cursive;">
+                            Impresión de consola
+                        </h6>
+                        <div class="rounded alto">
+                        <textarea class="form-control" id="$input" rows="1" cols="30" spellcheck="false" readonly="ylnodaer" style="resize: none;">Ejecutar</textarea><br>
+                        <textarea id="$console" class="form-control" rows="10" cols="30" readonly="ylnodaer" spellcheck="false"></textarea>
+                        <button class="btn btn-secondary mt-3" type="button" id="$button6" style="margin-left: 30%; font-family: cursive;"onclick="$console.value=''">Limpiar Consola</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIN ZONA DE CONTENIDO-->
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="sintax">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h3 class="page-section-heading text-center text-uppercase text-white mb-5" style="font-size: 70px; font-family:fantasy;">
+                    SINTAXIS
+                </h3>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <div class="card text-white bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title" style="font-size: 30px; font-family:fantasy;">
+                                    VARIABLES Y CONSTANTES
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded alto-p2" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    a=32
+                                    <br/>
+                                    IMPRIMIR a
+                                    <br/>
+                                    NUMBER b = 7
+                                    <br/>
+                                    IMPRIMIR b,"es un numero"
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="card text-white bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title" style="font-size: 30px; font-family:fantasy;">
+                                    CONDICIONALES
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded alto-p2"style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    <br/>
+                                    b = 6
+                                    <br/>
+                                    CUANDO a==6 HACER
+                                    <br/>
+                                    IMPRIMIR "los dos numeros se parecen"
+                                    <br/>
+                                    FNCUANDO
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-secondary mb-3 " style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title"style="font-size: 30px; font-family:fantasy;">
+                                    CICLO FOR
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded alto-p2" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    CICLOPARA j=1 HASTA 6
+                                    <br/>
+                                    IMPRIMIR j
+                                    <br/>
+                                    FNCICLOPARA
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <div class="card text-white bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title"style="font-size: 30px; font-family:fantasy;">
+                                    OPERACIONES BÁSICAS
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded alto-p2" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    a = 234
+                                    <br/>
+                                    b = 123
+                                    <br/>
+                                    "La suma es:", a + b
+                                    <br/>
+                                    "La resta es:", a - b
+                                    <br/>
+                                    "La multiplicación es:", a * b
+                                    <br/>
+                                    "La división es:", a / b
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-secondary mb-3 d-inline-block" style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title"style="font-size: 30px; font-family:fantasy;">
+                                    CADENAS Y ENTERO
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded alto-p2"style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    NUMBER codigo
+                                    <br/>
+                                    codigo = 12345
+                                    <br/>
+                                    IMPRIMIR "pedro tiene",codigo," de codigo."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card text-white bg-secondary mb-3 " style="max-width: 20rem;">
+                            <div class="card-header text-center">
+                                <h4 class="card-title"style="font-size: 30px; font-family:fantasy;">
+                                    CICLO WHILE
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text  rounded" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+                                    i = 0
+                                    <br/>
+                                    CICLOMIENTRAS i<5
+                                    <br/>
+                                    i=i+1
+                                    <br/>
+                                    IMPRIMIR i
+                                    <br/>
+                                    FNCICLOMIENTRAS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+        </script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">
+        </script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js">
+        </script>
+        <script src="assets/mail/contact_me.js">
+        </script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js">
+        </script>
+        <script>
+            src = "https://cdn.jsdelivr.net/npm/@glidejs/glide";
+        </script>
+        <script src="js/app.js">
+        </script>
+        <script src="js/cargar.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+.contend {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.cuadrado {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 2px;
+    background-color: white;
+    overflow: hidden;
+}
+.cuadrado h1 {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 30px;
+}
+.cadena {
+    height: 55px;
+    background-color: #1abc9c;
+    overflow: hidden;
+}
+#flecha {
+    position: absolute;
+    margin-top: 20px;
+    padding-left: 380px;
+    width: 50px;
+    height: 50px;
+}
